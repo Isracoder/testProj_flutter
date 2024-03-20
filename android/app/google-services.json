@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "309634813442",
+    "project_id": "testproj-fltr-notesproj",
+    "storage_bucket": "testproj-fltr-notesproj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309634813442:android:063fbb54143768e6eae11b",
+        "android_client_info": {
+          "package_name": "com.example.test_proj"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm2bjjNCmvrAQxRZt1ZJK60VsOxivMLdM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
