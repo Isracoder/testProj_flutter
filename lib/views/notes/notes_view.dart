@@ -38,7 +38,9 @@ class _NotesViewState extends State<NotesView> {
         actions: [
           IconButton(
               onPressed: () {
-                Navigator.of(context).pushNamed(newNoteRoute);
+                Navigator.of(context).pushNamed(
+                  createOrUpdateNoteRoute,
+                );
               },
               icon: const Icon(Icons.add)),
           PopupMenuButton(
@@ -85,11 +87,18 @@ class _NotesViewState extends State<NotesView> {
                             onDeleteNote: (note) async {
                               await _notesService.deleteNote(id: note.id);
                             },
+                            onTap: (note) {
+                              Navigator.of(context).pushNamed(
+                                createOrUpdateNoteRoute,
+                                arguments: note,
+                              );
+                            },
                           );
 
                           // return const Text('Got all the notes');
-                        } else
+                        } else {
                           return const Text('No Note data');
+                        }
                       // for a stream we hook into the waiting state
                       // for a future we hook into the done state (similar to promises in js)
 
