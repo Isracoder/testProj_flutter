@@ -6,7 +6,8 @@ import 'package:test_proj/firebase_options.dart';
 import 'package:test_proj/services/auth/auth_service.dart';
 // views
 import 'package:test_proj/views/login_view.dart';
-import 'package:test_proj/views/notes_view.dart';
+import 'package:test_proj/views/notes/new_note_view.dart';
+import 'package:test_proj/views/notes/notes_view.dart';
 import 'package:test_proj/views/register_view.dart';
 import 'package:test_proj/views/verify_email_view.dart';
 import 'dart:developer' as devtools show log;
@@ -25,6 +26,7 @@ void main() {
         registerRoute: (context) => const RegisterView(),
         notesRoute: (context) => const NotesView(),
         verifyEmailRoute: (context) => const VerifyEmailView(),
+        newNoteRoute: (context) => const NewNoteView(),
       },
     ),
   );
