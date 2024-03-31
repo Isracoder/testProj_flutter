@@ -19,7 +19,7 @@ class NotesView extends StatefulWidget {
 
 class _NotesViewState extends State<NotesView> {
   late final NotesService _notesService;
-  String get userEmail => AuthService.firebase().currentUser!.email!;
+  String get userEmail => AuthService.firebase().currentUser!.email;
   // ! does a force unwrap , because as the developer i made sure that
   // if the code reaches the notesview I do have a logged in user
 
