@@ -1,12 +1,10 @@
 // import 'package:firebase_auth/firebase_auth.dart';
-import 'dart:js_interop';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart' show ReadContext;
 
 import 'package:test_proj/constants/routes.dart';
 import 'package:test_proj/enums/menu_action.dart';
-import 'package:test_proj/services/auth/auth_exceptions.dart';
 import 'dart:developer' as devtools show log;
 
 import 'package:test_proj/services/auth/auth_service.dart';
@@ -14,7 +12,6 @@ import 'package:test_proj/services/auth/bloc/auth_bloc.dart';
 import 'package:test_proj/services/auth/bloc/auth_event.dart';
 import 'package:test_proj/services/cloud/cloud_note.dart';
 import 'package:test_proj/services/cloud/firebase_cloud_storage.dart';
-import 'package:test_proj/services/crud/notes_service.dart';
 import 'package:test_proj/utilities/dialogs/logout_dialog.dart';
 import 'package:test_proj/views/notes/notes_list_view.dart';
 
