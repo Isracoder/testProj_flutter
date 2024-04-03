@@ -64,6 +64,14 @@ void main() {
       final user = provider.currentUser;
       expect(user, isNotNull);
     });
+
+    // needs implementation from me
+    // test('User should be able to reset password', () async{
+    //   await provider.sendPasswordReset(toEmail: 'email') ;
+    //   final user = provider.currentUser ;
+    //   expect(user, isNotNull) ;
+    //   expect(user.email, ) ;
+    // }) ;
   });
 }
 
@@ -98,7 +106,7 @@ class MockAuthProvider implements AuthProvider {
     if (!isInitialized) throw NotInitializedException();
     if (email == 'foo@bar.com') throw UserNotFoundAuthException();
     if (password == 'foobar') throw WrongPasswordAuthException();
-    const user = AuthUser(isEmailVerified: false, email: 'foo@bar.com');
+    const user = AuthUser(isEmailVerified: false, email: 'foo@bar.com', id: '');
     _user = user;
     return Future.value(user);
   }
@@ -116,7 +124,16 @@ class MockAuthProvider implements AuthProvider {
   Future<void> sendEmailVerification() async {
     if (!isInitialized) throw NotInitializedException();
     if (_user == null) throw UserNotFoundAuthException();
-    const newUser = AuthUser(isEmailVerified: true, email: 'foo@bar.com');
+    const newUser =
+        AuthUser(isEmailVerified: true, email: 'foo@bar.com', id: '');
     _user = newUser;
+  }
+
+  // needs implementation from me along with adding a test
+  @override
+  Future<void> sendPasswordReset({required String toEmail}) {
+    // if (!isInitialized) throw NotInitializedException();
+    // if (_user == null) throw UserNotFoundAuthException();
+    throw UnimplementedError();
   }
 }
